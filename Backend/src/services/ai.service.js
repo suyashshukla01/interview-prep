@@ -60,15 +60,12 @@ async function generateInterviewReport({ resume, selfDescription, jobDescription
 
 async function generatePdfFromHtml(htmlContent) {
     const browser = await puppeteer.launch({
-    args: [
-        ...chromium.args,
-        "--no-sandbox",
-        "--disable-setuid-sandbox"
-    ],
-    defaultViewport: chromium.defaultViewport,
     executablePath: await chromium.executablePath(),
-    headless: true
-})
+    args: chromium.args,
+    headless: true,
+    defaultViewport: chromium.defaultViewport
+});
+
     const page = await browser.newPage();
     await page.setContent(htmlContent, { waitUntil: "networkidle0" })
 
