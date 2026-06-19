@@ -1,0 +1,58 @@
+.new-report-page {
+  padding: 48px 0 72px;
+  flex: 1;
+  display: flex;
+}
+
+.new-report-inner {
+  max-width: 560px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.new-report-inner > h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 24px;
+  margin: 8px 0 6px;
+}
+
+.new-report-inner > p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0 0 28px;
+}
+
+.file-drop {
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  background: var(--bg-card);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.file-drop:hover {
+  border-color: var(--accent);
+}
+
+.file-drop strong {
+  color: var(--text);
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.new-report-loading {
+  text-align: center;
+  padding: 64px 0;
+}
+
+.new-report-loading p {
+  margin-top: 16px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-muted);
+}

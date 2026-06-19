@@ -1,0 +1,32 @@
+.report-tabs {
+  display: flex;
+  gap: 2px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.report-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.report-tab {
+  font-size: 13px;
+  padding: 9px 16px;
+  color: var(--text-muted);
+  background: none;
+  border: 1px solid transparent;
+  border-bottom: none;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+}
+
+.report-tab:hover {
+  color: var(--text);
+}
+
+.report-tab.is-active {
+  background: var(--bg-card);
+  color: var(--text);
+  border-color: var(--border);
+}

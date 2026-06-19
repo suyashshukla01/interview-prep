@@ -1,0 +1,29 @@
+.dashboard-page {
+  padding: 48px 0 72px;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.dashboard-header h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 24px;
+  margin: 6px 0 0;
+}
+
+.dashboard-list {
+  margin-top: 28px;
+}
+
+.dashboard-state {
+  display: flex;
+  justify-content: center;
+  padding: 64px 0;
+}

@@ -1,0 +1,144 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.navbar-logo-mark {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 14px;
+}
+
+.navbar-links a {
+  color: var(--text-muted);
+}
+
+.navbar-links a.active,
+.navbar-links a:hover {
+  color: var(--text);
+}
+
+.navbar-text-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.navbar-text-btn:hover {
+  color: var(--text);
+}
+
+.navbar-cta {
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+}
+
+.navbar-cta:hover {
+  opacity: 0.92;
+}
+
+.lamp-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 6px 12px;
+  cursor: pointer;
+  color: var(--accent);
+  font-size: 12px;
+  font-family: var(--font-mono);
+}
+
+.lamp-toggle:hover {
+  opacity: 0.85;
+}
+
+.navbar-burger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.navbar-burger span {
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .navbar-burger {
+    display: flex;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 16px 24px;
+    display: none;
+  }
+
+  .navbar-links.is-open {
+    display: flex;
+  }
+
+  .navbar-cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  .lamp-toggle {
+    align-self: flex-start;
+  }
+}
